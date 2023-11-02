@@ -88,7 +88,7 @@ export default function Home() {
       const proposal = await readContract({
         address: CryptoDevsDAOAddress,
         abi: CryptoDevsDAOABI,
-        functionName: "proposals",
+        functionName: "idToProposal",
         args: [id],
       });
 
@@ -320,6 +320,7 @@ export default function Home() {
           <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
           <div className={styles.description}>Welcome to the DAO!</div>
           <div className={styles.description}>
+            {console.log(nftBalanceOfUser)}
             Your CryptoDevs NFT Balance: {nftBalanceOfUser.data.toString()}
             <br />
             {daoBalance.data && (

@@ -40,7 +40,7 @@ contract CryptoDevsDAO is Ownable{
     uint256 public numProposals;
 
 
-    mapping(uint256=>Proposal)idToProposal;
+    mapping(uint256=>Proposal)public idToProposal;
 
     //Modifiers
     modifier onlyDaoMember{
